@@ -48,6 +48,13 @@
                         <li><a class="menu-item" href="#">Portfolio</a></li>
                         <li><a class="menu-item" href="#">Blog</a></li>
                         <li><a class="menu-item" href="#">Contacts</a></li>
+                        <li class="icons-item">
+                            <a href="#" class="menu-item"><i class="fa fa-solid fa-magnifying-glass menu-item"></i></a>
+                            <span></span>
+                            <a href="#" class="menu-item"><i class="fa fa-solid fa-cart-shopping menu-item"></i></a>
+                            <span></span>
+                            <a href="#" class="menu-item"><i class="fa fa-solid fa-user menu-item"></i></a>
+                        </li>
                     </ul>
                     <!--icon-->
                     <div class="icon-navbar flex">
@@ -487,19 +494,19 @@
             <p class="copy-right">Copyright &copy; 2019 Gymax - Design by ArrowHitech - All Rights Reserved</p>
         </footer>
     </div>
-            <!--external-js-->
-        <script src="./js/swiper-bundle.min.js" type="text/javascript"></script>
-        <script src="./js/index.js" type="text/javascript"></script>
-        <!--internal-js-->
-        <script>
-            btn.onclick = function(){ 
-            menu.classList.toggle('active-m');
-            }
-            document.onclick = function(e){
-            if(e.target.classList.contains('menu-item') === false && e.target.id !== 'menu-btn') {
-                menu.classList.remove('active-m');
-            }
+    <!--external-js-->
+    <script src="./js/swiper-bundle.min.js" type="text/javascript"></script>
+    <script src="./js/index.js" type="text/javascript"></script>
+    <!--internal-js-->
+    <script>
+        btn.onclick = function(){ 
+        menu.classList.toggle('active-m');
+        };
+        document.onclick = function(e){
+        if(e.target.classList.contains('menu-item') === false && e.target.id !== 'menu-btn') {
+            menu.classList.remove('active-m');
         }
-        </script>
+    }
+    </script>
 </body>
 </html>

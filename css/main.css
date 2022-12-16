@@ -69,9 +69,9 @@ hr {
 .wrapper header .header-top {
   background-color: rgba(0, 0, 0, 0.6);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .wrapper header .header-top {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 .wrapper header .header-top a {
@@ -107,9 +107,6 @@ hr {
     font-size: 3.3rem;
   }
 }
-.wrapper header .header-top nav .navbar.active-m {
-  left: 0;
-}
 @media screen and (max-width: 1200px) {
   .wrapper header .header-top nav .logo {
     transform: scale(0.9);
@@ -124,6 +121,9 @@ hr {
   align-items: center;
   gap: 5.2rem;
 }
+.wrapper header .header-top nav .navbar .icons-item {
+  display: none;
+}
 .wrapper header .header-top nav .navbar a {
   font-size: 1.6rem;
   line-height: 2.8rem;
@@ -131,7 +131,7 @@ hr {
 }
 @media screen and (max-width: 1024px) {
   .wrapper header .header-top nav .navbar {
-    display: none;
+    display: block;
     z-index: 99999;
     position: fixed;
     top: 0;
@@ -155,7 +155,6 @@ hr {
   .wrapper header .header-top nav .navbar a:hover {
     color: #000;
     background-color: #e3dbdb;
-    border-radius: 0px 10px 10px 0;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 992px) {
@@ -172,6 +171,15 @@ hr {
   .wrapper header .header-top nav .navbar {
     width: 60vw;
   }
+  .wrapper header .header-top nav .navbar .icons-item {
+    margin-top: 1rem;
+    display: block;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .wrapper header .header-top nav .navbar .icons-item a {
+    display: inline;
+  }
 }
 @media screen and (max-width: 1024px) and (max-width: 992px) and (max-width: 768px) and (max-width: 450px) {
   .wrapper header .header-top nav .navbar {
@@ -182,6 +190,10 @@ hr {
   .wrapper header .header-top nav .navbar {
     width: 72vw;
   }
+}
+.wrapper header .header-top nav .navbar.active-m {
+  left: 0;
+  right: auto;
 }
 .wrapper header .header-top nav .icon-navbar {
   align-items: center;
@@ -201,11 +213,6 @@ hr {
 @media screen and (max-width: 1200px) and (max-width: 545px) {
   .wrapper header .header-top nav .icon-navbar {
     opacity: 0;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .wrapper header .header-top nav .logo {
-    margin-left: 12rem;
   }
 }
 @media screen and (max-width: 1200px) and (max-width: 1024px) {
@@ -797,7 +804,7 @@ hr {
 @media screen and (max-width: 768px) and (max-width: 450px) {
   .wrapper .brands-list img {
     width: calc((100% - 30px) / 1);
-    transform: scale(0.55);
+    transform: scale(0.45);
   }
 }
 .wrapper footer {
@@ -881,7 +888,8 @@ hr {
 @media screen and (max-width: 1036px) and (max-width: 768px) and (max-width: 450px) {
   .wrapper footer .below-footer .col {
     flex-basis: 52%;
-    align-self: center;
+    margin-bottom: 1.5rem;
+    text-align: center;
   }
   .wrapper footer .below-footer .col h3 {
     text-align: center;
