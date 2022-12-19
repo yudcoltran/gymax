@@ -28,12 +28,14 @@
 </head>
 <body>
     <div class="wrapper">
+        
         <!--header-->
         <header>
+            <div id="overlay" onclick="off()"></div>
             <!--navigation bar-->
             <div class="header-top">
                 <nav class="container flex">
-                    <a href="#" class="menu-btn"><i id="menu-btn" class="fa-solid fa-bars"></i></a>
+                    <a href="#" class="menu-btn" onclick="on()"><i id="menu-btn" class="fa-solid fa-bars"></i></a>
                     <!--logo-->
                     <h1 class="logo">
                         <a href="#">
@@ -508,13 +510,25 @@
     <!--internal-js-->
     <script>
         btn.onclick = function(){ 
-        menu.classList.toggle('active-m');
-        };
-        document.onclick = function(e){
-        if(e.target.classList.contains('menu-item') === false && e.target.id !== 'menu-btn') {
-            menu.classList.remove('active-m');
+            menu.classList.toggle('active-m');
+            };
+            document.onclick = function(e){
+            if(e.target.classList.contains('menu-item') === false && e.target.id !== 'menu-btn') {
+                menu.classList.remove('active-m');
+            }
         }
-    }
+        function on() {
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+        }
+        $('img').mousedown(function (e) {
+            if(e.button == 2) { // right click
+                return false; // do nothing!
+            }
+        });
     </script>
 </body>
 </html>

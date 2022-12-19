@@ -51,6 +51,24 @@ hr {
   align-items: center;
 }
 
+img {
+  pointer-events: none;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  cursor: pointer;
+}
+
 .wrapper {
   scroll-behavior: smooth;
 }
@@ -92,7 +110,6 @@ hr {
 }
 .wrapper header .header-top nav h1 {
   position: relative;
-  left: -7.4rem;
   padding: 2.3rem 0;
 }
 .wrapper header .header-top nav h1 a {
@@ -101,11 +118,19 @@ hr {
 .wrapper header .header-top nav h1 a img {
   vertical-align: middle;
 }
-.wrapper header .header-top nav #menu-btn {
+.wrapper header .header-top nav .menu-btn {
   display: none;
 }
 @media screen and (max-width: 1023px) {
-  .wrapper header .header-top nav #menu-btn {
+  .wrapper header .header-top nav .menu-btn {
+    display: block;
+  }
+}
+.wrapper header .header-top nav .menu-btn #menu-btn {
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  .wrapper header .header-top nav .menu-btn #menu-btn {
     display: block;
     font-size: 3.3rem;
   }
@@ -123,7 +148,7 @@ hr {
 .wrapper header .header-top nav .navbar {
   position: relative;
   top: 2px;
-  left: -63px;
+  left: -25px;
   align-items: center;
   gap: 5.2rem;
 }
@@ -224,20 +249,14 @@ hr {
     opacity: 0;
   }
 }
-@media screen and (max-width: 1440px) {
-  .wrapper header .header-top nav .logo {
-    left: -11.7rem;
-  }
-}
 @media screen and (max-width: 1440px) and (max-width: 1200px) {
   .wrapper header .header-top nav .logo {
-    left: -5.7rem;
+    left: -1rem;
   }
 }
 @media screen and (max-width: 1440px) and (max-width: 1200px) and (max-width: 1023px) {
   .wrapper header .header-top nav .logo {
     margin-left: 14rem;
-    left: 0;
   }
 }
 @media screen and (max-width: 1440px) and (max-width: 1200px) and (max-width: 1023px) and (max-width: 992px) {
@@ -304,7 +323,7 @@ hr {
   font-size: 4rem;
   line-height: 6rem;
   position: relative;
-  left: -4px;
+  left: -2px;
   top: -7px;
 }
 .wrapper .hero-jr .hero-content h3 {
