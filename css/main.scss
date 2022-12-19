@@ -59,6 +59,7 @@ hr {
     header {
         overflow: hidden;
         background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/hero-img.jpg) center/cover no-repeat;
+        background-position: 100% 83%;
         h1, h2, h3, a {
             color: $bodyColor;
             @include maxWidth(992px) {
@@ -84,6 +85,8 @@ hr {
                 @include hasColumn();
                 align-items: center;
                 h1 {
+                    position: relative;
+                    left: -7.4rem;
                     padding: 2.3rem 0;
                     a {
                         display: block;
@@ -94,7 +97,7 @@ hr {
                 }
                 #menu-btn {
                     display: none;
-                    @include maxWidth(1024px) {
+                    @include maxWidth(1023px) {
                         display: block;
                         font-size: 3.3rem;
                     }
@@ -108,6 +111,9 @@ hr {
                     }
                 }
                 .navbar {
+                    position: relative;
+                    top: 2px;
+                    left: -63px;
                     .icons-item {
                         display: none;
                     }
@@ -118,7 +124,7 @@ hr {
                         line-height: 2.8rem;
                         display: block;
                     }
-                    @include maxWidth(1024px) {
+                    @include maxWidth(1023px) {
                         display: block;
                         z-index: 99999;
                         position: fixed;
@@ -176,6 +182,9 @@ hr {
                     right: auto;
                 }
                 .icon-navbar {
+                    position: relative;
+                    top: 3px;
+                    left: -6px;
                     align-items: center;
                     gap: 2.5rem;
                     font-size: 1.6rem;
@@ -192,25 +201,34 @@ hr {
                         font-size: 2.2rem;
                     }
                 }
-                @include maxWidth(1200px) {
-                    @include maxWidth(1024px) {
+                @include maxWidth(1440px) {
+                    .logo {
+                        left: -11.7rem;
+                    }
+                    @include maxWidth(1200px) {
                         .logo {
-                            margin-left: 14rem;
+                            left: -5.7rem;
                         }
-                        @include maxWidth(992px) {
+                        @include maxWidth(1023px) {
                             .logo {
-                                padding: 1rem;
-                                img {
-                                    object-fit: scale-down;
-                                }
+                                margin-left: 14rem;
+                                left: 0;
                             }
-                            @include maxWidth(768px) {
+                            @include maxWidth(992px) {
                                 .logo {
-                                    margin-left: 12rem;
+                                    padding: 1rem;
+                                    img {
+                                        object-fit: scale-down;
+                                    }
                                 }
-                                @include maxWidth(545px) {
+                                @include maxWidth(768px) {
                                     .logo {
-                                        margin-left: 11.5rem;
+                                        margin-left: 12rem;
+                                    }
+                                    @include maxWidth(545px) {
+                                        .logo {
+                                            margin-left: 11.5rem;
+                                        }
                                     }
                                 }
                             }
@@ -245,7 +263,7 @@ hr {
             @include hasColumn;
             width: 100%;
             height: 100%;
-            margin-bottom: 31.8rem;
+            margin-bottom: 31.6rem;
             .hero-content {
                 z-index: 9999;
                 padding-top: 19.3rem;
@@ -253,10 +271,16 @@ hr {
                 flex-basis: 48%;
                 h1 {
                     font-size: 6rem;
+                    position: relative;
+                    left: -3px;
+                    top: 1px;
                 }
                 h2 {
                     font-size: 4rem;
                     line-height: 6rem;
+                    position: relative;
+                    left: -4px;
+                    top: -7px;
                 }
                 h3 {
                     padding-top: 1.3rem;
@@ -264,6 +288,9 @@ hr {
                     font-weight: 500;
                     line-height: 2.4rem;
                     padding-bottom: 5.4rem;
+                    position: relative;
+                    top: -1px;
+                    left: -1px;
                 }
                 a {
                     border: 1px solid $bodyColor;
@@ -273,6 +300,8 @@ hr {
                     box-shadow: inset 0 0 0 0 #ffffff;
                     transition: all 0.6s;
                     display: inline-block;
+                    position: relative;
+                    top: -1px;
                     &:hover {
                         background-color: var(--body-color);
                         color: rgb(0, 0, 0);
@@ -302,6 +331,8 @@ hr {
                     padding-top: 9.2rem;
                     height: auto;
                     max-width: 100%;
+                    position: relative;
+                    left: 9px;
                     @include maxWidth(1200px) {
                        transform: scale(.9);
                        @include maxWidth(992px) {
@@ -323,14 +354,14 @@ hr {
         padding-bottom: 50.7rem;
         @include maxWidth(1200px) {
             padding-bottom: 90rem;
-            @include maxWidth(768px) {
+            @include maxWidth(545px) {
                 padding-bottom: 240rem;
             }
         }
         .product-category {
             position: absolute;
             flex-wrap: wrap;
-            top: -77px;
+            top: -78px;
             max-width: 100%;
             .cat {
                 flex-grow: 1;
@@ -344,24 +375,54 @@ hr {
                     height: 100%;
                     object-fit: cover;
                 }
+                h3 {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1.8rem;
+                    margin-bottom: 2rem;
+                    margin-top: -0.6rem;
+                    position: relative;
+                    top: -7px;
+                } 
                 p {
                     color: $textColor;
                     font-size: 1.4rem;
                     text-align: center;
                     line-height: 2.4rem;
                     margin-bottom: -1.3rem;
+                    position: relative;
+                    top: -11px;
                 }
             }
             .pos-1 {
                 order: 1;
+                img {
+                    object-position: 100% 0%;
+                }
             }
             .pos-2 {
                 order: 5;
+                img {
+                    object-position: 100% 100%;
+                }
             }
             .pos-3 {
                 order: 3;
+                img {
+                    object-position: 100% 20%;
+                }
             }
             .pos-4 {
+                h3 {
+                    position: relative;
+                    top: 1px;
+                    left: -1px;
+                }
+                p {
+                    position: relative;
+                    top: -4px;
+                    left: -1px;
+                }
                 order: 4;
                 h3::before {
                     content: '';
@@ -371,6 +432,8 @@ hr {
                     padding-bottom: 3rem;
                     margin: 0 auto;
                     background: url(../img/dumbbells-icon.png) center no-repeat;
+                    position: relative;
+                    top: -7px;
                 }
             }
             .pos-5 {
@@ -383,6 +446,8 @@ hr {
                     padding-bottom: 3rem;
                     display: block;
                     background: url(../img/strength-icon.png) center no-repeat;
+                    position: relative;
+                    top: -8px;
                 }
             }
             .pos-6 {
@@ -395,15 +460,10 @@ hr {
                     padding-bottom: 3rem;
                     display: block;
                     background: url(../img/power-rack&cage-icon.png) center no-repeat;
+                    position: relative;
+                    top: -8px;
                 }
             }
-            h3 {
-                text-transform: uppercase;
-                font-weight: bold;
-                font-size: 1.8rem;
-                margin-bottom: 2rem;
-                margin-top: -0.6rem;
-            } 
             @include maxWidth (1440px) {
                 .cat {
                     h3::before { 
@@ -426,7 +486,7 @@ hr {
                     .pos-2 {
                         order: 4;
                     }
-                    @include maxWidth(768px) {
+                    @include maxWidth(545px) {
                         .cat {
                             height: 40rem;
                             flex-basis: 100%;
@@ -461,13 +521,13 @@ hr {
                         .pos-6 {
                             order : 6;
                         }
-                        @include maxWidth(576px) {
-                            .cat {
-                                img {
-                                    object-position: 100% 10%;
-                                }
-                            }
-                        }
+                        // @include maxWidth(576px) {
+                        //     .cat {
+                        //         img {
+                        //             object-position: 100% 10%;
+                        //         }
+                        //     }
+                        // }
                     }
                 }
             }
@@ -504,7 +564,10 @@ hr {
                         font-size: 2.8rem;
                     }
                     @include maxWidth(545px) {
-                        font-size: 1.4rem;
+                        font-size: 2rem;
+                        @include maxWidth (395px) {
+                            font-size: 1.6rem;
+                        }
                     }
                 } 
             }
@@ -610,7 +673,7 @@ hr {
                         }
                     }
                 }
-                @include maxWidth (992px) {
+                @include maxWidth (768px) {
                     @include col(2);
                     img {
                         height: 25rem;
@@ -637,7 +700,7 @@ hr {
                             }
                         }
                     }
-                    @include maxWidth(768px) {
+                    @include maxWidth(475px) {
                         @include col(1);
                         img {
                             height: 29rem;
@@ -773,7 +836,6 @@ hr {
             @include maxWidth(450px) {
                 &-list {
                     img {
-                        @include col(1);
                         transform: scale(.45);
                     }
                 }
@@ -832,26 +894,38 @@ hr {
                 justify-content: center;
             }
             .col {
+                display: flex;
+                justify-content: center;
                 margin: 0 15px;
                 @include col(4);
-                h3 {
-                    font-size: 1.8rem;
-                    line-height: 3rem;
-                    margin-bottom: 1.8rem;
-                }
-                a {
-                    font-size: 1.4rem;
-                    line-height: 4rem;
-                    display: block;
-                    i {
-                        margin-right: 1.2rem;
+                // text-align: center;
+                div {
+                    display: inline-block;
+                    // text-align: left;
+                    h3 {
+                        font-size: 1.8rem;
+                        line-height: 3rem;
+                        margin-bottom: 1.8rem;
                     }
-                    &:hover {
-                        color: $bodyColor;
+                    a {
+                        font-size: 1.4rem;
+                        line-height: 4rem;
+                        display: block;
+                        i {
+                            margin-right: 1.2rem;
+                        }
+                        &:hover {
+                            color: $bodyColor;
+                        }
                     }
                 }
                 @include maxWidth(1036px) {
                     @include maxWidth(768px) {
+                        justify-content: unset;
+                        div {
+                            text-align: center;
+                            margin: 0 auto;
+                        }
                         @include col(2);
                         @include maxWidth(450px) {
                             flex-basis: 52%;
